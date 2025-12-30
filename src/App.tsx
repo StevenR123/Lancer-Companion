@@ -4,11 +4,17 @@ import './App.css'
 // Import the mech data
 import mechData from './Example Mech/Blackbeard-1.1.json'
 
-// Import Lancer Data
-import blackbeardFrame from './Lancer Data/Frame/Blackbeard.json'
-import syntheticMuscleNetting from './Lancer Data/System/Synthetic Muscle Netting.json'
-import chainAxe from './Lancer Data/Weapon/Chain Axe.json'
-import briareosBonus from './Lancer Data/Core Bonus/BRIAREOS FRAME REINFORCEMENT.json'
+// Import all Lancer Data using glob
+const framesContext = import.meta.glob('./Lancer Data/Frame/*.json', { eager: true })
+const systemsContext = import.meta.glob('./Lancer Data/System/*.json', { eager: true })
+const weaponsContext = import.meta.glob('./Lancer Data/Weapon/*.json', { eager: true })
+const coreBonusesContext = import.meta.glob('./Lancer Data/Core Bonus/*.json', { eager: true })
+
+// Convert imported modules to arrays
+const allFrames = Object.values(framesContext).map((mod: any) => mod.default)
+const allSystems = Object.values(systemsContext).map((mod: any) => mod.default)
+const allWeapons = Object.values(weaponsContext).map((mod: any) => mod.default)
+const allCoreBonuses = Object.values(coreBonusesContext).map((mod: any) => mod.default)
 
 interface MechData {
   Name: string
@@ -48,21 +54,29 @@ function App() {
 
   useEffect(() => {
     // Load mech data
-    setMech(mechData as MechData)
+    const loadedMech = mechData as MechData
+    setMech(loadedMech)
 
-    // Load frame data
-    setFrame(blackbeardFrame as FrameData)
+    // Find and load frame data based on mech's frame name
+    const frameData = allFrames.find((f: any) => f.Name === loadedMech.Frame)
+    if (frameData) setFrame(frameData as FrameData)
 
-    // Load systems
-    const systemsData = [syntheticMuscleNetting]
+    // Find and load systems based on mech's systems array
+    const systemsData = loadedMech.Systems.map((systemName: string) => 
+      allSystems.find((s: any) => s.Name === systemName)
+    ).filter(Boolean)
     setSystems(systemsData as SystemData[])
 
-    // Load weapons
-    const weaponsData = [chainAxe]
+    // Find and load weapons based on mech's weapons array
+    const weaponsData = loadedMech.Weapons.map((weaponName: string) => 
+      allWeapons.find((w: any) => w.Name === weaponName)
+    ).filter(Boolean)
     setWeapons(weaponsData as WeaponData[])
 
-    // Load core bonuses
-    const coreBonusesData = [briareosBonus]
+    // Find and load core bonuses based on mech's core bonuses array
+    const coreBonusesData = loadedMech['Core Bonuses'].map((bonusName: string) => 
+      allCoreBonuses.find((b: any) => b.Name === bonusName)
+    ).filter(Boolean)
     setCoreBonuses(coreBonusesData as CoreBonusData[])
   }, [])
 
