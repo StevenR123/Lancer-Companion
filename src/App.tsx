@@ -97,17 +97,13 @@ function App() {
      <div className="column-margin">
       <p ><strong>Manufacturer:</strong> {frame.Manufacturer}</p>
       <p ><strong>Role:</strong> {frame.Role}</p>
-      <p ><strong>Source:</strong> {frame.Source}</p>
       
       {/* Two Column Layout for Description and Core Stats */}
       <div className="two-column column-margin">             
        {/* Left Column - Core Stats */}
        <div className="column">
         <h3 className="header-center">Core Stats</h3>
-        <p ><strong>Size:</strong> {frame['Core Stats']?.Size}</p>
-        <p ><strong>Armor:</strong> {frame['Core Stats']?.Armor}</p>
-        <p ><strong>Save Target:</strong> {frame['Core Stats']?.['Save Target']}</p>
-        <p ><strong>Sensors:</strong> {frame['Core Stats']?.Sensors}</p>
+        <p ><strong>Size:</strong> {frame['Core Stats']?.Size} | <strong> Armor:</strong> {frame['Core Stats']?.Armor} |<strong> Save Target:</strong> {frame['Core Stats']?.['Save Target']} |<strong> Sensors:</strong> {frame['Core Stats']?.Sensors}</p>
         <p ><strong>HP:</strong> {frame['Core Stats']?.Hull?.HP} | <strong>Repair Cap:</strong> {frame['Core Stats']?.Hull?.['Repair Cap']}</p>
         <p ><strong>Evasion:</strong> {frame['Core Stats']?.Agility?.Evasion} | <strong>Speed:</strong> {frame['Core Stats']?.Agility?.Speed}</p>
         <p ><strong>E-Defense:</strong> {frame['Core Stats']?.Systems?.['E-Defense']} | <strong>Tech Attack:</strong> {frame['Core Stats']?.Systems?.['Tech Attack']} | <strong>SP:</strong> {frame['Core Stats']?.Systems?.SP}</p>
@@ -221,7 +217,6 @@ function App() {
        {/* Left Column - Basic Info */}
        <div className="column">
         <p ><strong>Manufacturer:</strong> {bonus.Manufacturer}</p>
-        <p ><strong>Source:</strong> {bonus.Source}</p>
         <p ><strong>Effect:</strong> {bonus.Effect}</p>
        </div>
        
