@@ -1,0 +1,47 @@
+{
+    "Name": "",
+    "Manufacturer": "",
+    "Role": "",
+    "Source": "",    
+    "Description": "",
+    "Core Stats": {
+        "Size": "",
+        "Armor": "",
+        "Save Target": "",
+        "Sensors": "",
+        "Hull": {
+            "HP": "",
+            "Repair Cap": ""
+        },
+        "Agility": {
+            "Evasion": "",
+            "Speed": ""
+        },
+        "Systems": {
+            "E-Defense": "",
+            "Tech Attack": "",
+            "SP": ""
+        },
+        "Engineering": {
+            "Heat Cap": ""
+        }
+    },
+    "Traits": [
+        {
+            "Name": "",
+            "Effect": ""
+        }
+    ],
+    "Mounts": [],
+    "Core System": {
+        "Name": "",
+        "Description": "",
+        "Effect": "",
+        "Tags": [],
+        "Addional System": {
+            "Name": "",
+            "Effect": "",
+            "Tags": []
+        }
+    }
+}

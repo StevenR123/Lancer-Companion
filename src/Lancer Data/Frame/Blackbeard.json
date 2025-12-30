@@ -1,0 +1,62 @@
+{
+    "Name": "Blackbeard",
+    "Manufacturer": "IPS-N",
+    "Role": "Striker",
+    "Source": "Core",
+    "Description": "The Blackbeard is IPS-N’s aggressive solution to piracy: a front-facing, first-striking mech designed for environments in which combustible kinetic weapons are useless, dangerous, or likely to cause unnecessary collateral damage. With its distinctly slim frame, the Blackbeard doesn’t just look fast – it also has a reduced radar profile. This mech is hard to track and harder still to hit.      The Blackbeard range comprises two lines: the standard IPS-N/BB-L production line model, and the IPS-N/BB-Sk, a limited-release prototype purpose-built to house IPS-N’s SEKHMET-class NHPs.",
+    "Core Stats": {
+        "Size": "1",
+        "Armor": "1",
+        "Save Target": "10",
+        "Sensors": "5",
+        "Hull": {
+            "HP": "12",
+            "Repair Cap": "5"
+        },
+        "Agility": {
+            "Evasion": "8",
+            "Speed": "5"
+        },
+        "Systems": {
+            "E-Defense": "6",
+            "Tech Attack": "-2",
+            "SP": "5"
+        },
+        "Engineering": {
+            "Heat Cap": "4"
+        }
+    },
+    "Traits": [
+        {
+            "Name": "GRAPPLE CABLE",
+            "Effect": "The Blackbeard can grapple targets within Range 5. If the GRAPPLE is successful, the Blackbeard is immediately pulled to a space adjacent the target by the most direct path. If there are no suitable spaces, the grapple breaks and the Blackbeard does not move."
+        },
+        {
+            "Name": "LOCK/KILL SUBSYSTEM",
+            "Effect": "While grappling, the Blackbeard can BOOST and use reactions."
+        },
+        {
+            "Name": "EXPOSED REACTOR",
+            "Effect": "The Blackbeard receives +1 Difficulty on ENGINEERING checks and saves."
+        }
+    ],
+    "Mounts": [
+        "Flex",
+        "Main",
+        "Heavy"
+    ],
+    "Core System": {
+        "Name": "ASSAULT GRAPPLES",
+        "Description": "The IPS-N-branded Assault Grappling System is a class-leading technology rated for hauling, supporting, and securing chassis of sizes up to category 4D. Grapple heads are interchangeable and can be swapped for engagement with soft or hard targets – either electrified or loaded with codespike systems for long-distance incapacitation.",
+        "Effect": "",
+        "Tags": [],
+        "Addional System": {
+            "Name": "",
+            "Effect": "This system fires grappling harpoons at any number of targets within Range 5 and line of sight. Affected characters that fail a HULL save take 2d6 Kinetic, are knocked PRONE, and then pulled adjacent to you, or as close as possible. They become IMMOBILIZED until the end of their next turn. If they pass the save, they take half damage and are otherwise unaffected.",
+            "Tags": [
+                "Active (1CP)",
+                "Quick Action"
+            ]
+        }
+    }
+}

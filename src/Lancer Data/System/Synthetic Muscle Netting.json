@@ -1,0 +1,13 @@
+{
+    "Name": "Synthetic Muscle Netting",
+    "Manufacturer": "IPS-N",
+    "Liscense": "Blackbeard",
+    "Liscense Level": "1",
+    "Source": "Core",
+    "SP Cost": "2",
+    "Tags": [
+        "Unique"
+    ],
+    "Effect": "You may RAM targets larger than you, and when you GRAPPLE or RAM larger targets, you count as the same SIZE as the largest opponent. When you GRAPPLE or RAM opponents of the same SIZE or smaller, you count as at least one SIZE larger. Additionally, your lifting and dragging capacity is doubled.",
+    "Description": "IPS-N’s Synthetic Muscle Netting (SMN) is a proprietary, field-proven modification compatible with all existing IPS-N frames. This convenient spray-on catalytic and structural enhancement boosts manipulator and propulsion performance by roughly 25 percent with no demonstrated reduction in operational life. An SMN layer also enhances impact absorption and thermal insulation. IPS-N recommends that pilots apply SMN to internal components only and practice frequent cleaning to prevent septic-analogous decay."
+}

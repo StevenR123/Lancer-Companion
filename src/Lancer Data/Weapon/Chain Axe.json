@@ -1,0 +1,17 @@
+{
+    "Name": "Chain Axe",
+    "Manufacturer": "IPS-N",
+    "Liscense": "Blackbeard",
+    "Liscense Level": "1",
+    "Source": "Core",
+    "Mount": "Main",
+    "Weapon Type": "Melee",
+    "Range/Threat": "1",
+    "Damage": "1d6",
+    "Damage Type": "Kinetic",
+    "Tags": [
+        "Reliable 2"
+    ],
+    "Effect": "On Critical Hit: Your target is SHREDDED until the end of the current turn.",
+    "Description": "A simple tactical-scale version of a logging tool, IPS-N’s chain axe is a serrated chainblade run off core power. The axe’s teeth are tungsten-tipped, hardened to chew through both hard and soft targets. Chain axes are effective weapons and utility tools that are often used by boarding parties to breach reinforced bulkheads."
+}
